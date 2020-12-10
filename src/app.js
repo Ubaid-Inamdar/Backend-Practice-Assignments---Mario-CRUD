@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // your code goes here
-
 app.get("/mario", (req, res) => {
     marioModel.find()
     .then((data)=> res.json(data))
@@ -59,9 +58,5 @@ app.delete("/mario/:id", (req, res) => {
     })
     .catch(err => res.status(400).json({"message":err.message}))
 })
-
-
-
-
 
 module.exports = app;
